@@ -1,0 +1,52 @@
+/* Motion system: crisp entrances, gentle depth, and clear feedback. */
+.scroll-progress {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #a75549, #d19d56 36%, #6c8980 69%, #917e9a);
+}
+
+.hero:before {
+  background-size: 100% 100%, 100% 100%, 165% 165%;
+  animation: color-drift 24s ease-in-out infinite alternate;
+}
+@keyframes color-drift {
+  from { background-position: 0 0, 100% 0, 0 50%; }
+  to { background-position: 100% 0, 0 100%, 100% 50%; }
+}
+
+.hero h1.animated-title { overflow: visible; }
+.title-line { display: block; overflow: hidden; padding-bottom: .1em; margin-bottom: -.1em; }
+.title-line > span, .title-line > em { display: inline-block; }
+.hero-art { perspective: 1000px; }
+.art-paper { transform-origin: 50% 50%; will-change: transform, opacity; }
+.sticky-note { transform-origin: 70% 30%; will-change: transform, opacity; }
+.big-initial { animation: ink-settle .7s cubic-bezier(.2,.8,.25,1) .48s both; }
+@keyframes ink-settle {
+  from { opacity: 0; transform: translateY(9px) scale(.96); filter: blur(2px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+
+.project-art { transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.project-card:hover .project-art { transform: scale(1.035); }
+.venture-scribble { transition: transform .65s cubic-bezier(.2,.75,.25,1); }
+.project-card:hover .venture-scribble { transform: rotate(-9deg) scale(1.06); }
+.swatches { transition: transform .55s cubic-bezier(.2,.75,.25,1); }
+.project-card:hover .swatches { transform: rotate(-1deg) translateY(-4px); }
+.hanger svg { transition: transform .55s cubic-bezier(.2,.75,.25,1); transform-origin: center; }
+.project-card:hover .hanger svg { transform: rotate(6deg) translateY(-2px); }
+.paper-stack { transition: transform .55s cubic-bezier(.2,.75,.25,1); }
+.project-card:hover .paper-stack { transform: rotate(-1deg) translateY(-4px); }
+.social-list>a svg { transition: transform .22s ease; }
+.social-list>a:hover svg { transform: translate(2px,-2px); }
+.scroll-cue i { transition: width .28s ease; }
+.scroll-cue:hover i { width: 38px; }
+
+@media(prefers-reduced-motion:reduce) {
+  .hero:before, .big-initial { animation: none; }
+  .art-paper, .sticky-note, .project-art, .venture-scribble, .swatches, .hanger svg, .paper-stack, .social-list>a svg { will-change: auto; transition: none; }
+}

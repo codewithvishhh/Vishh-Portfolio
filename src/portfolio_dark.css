@@ -1,0 +1,137 @@
+/* Darken the canvas while keeping the warm, editorial color accents. */
+:root {
+  --paper: #202523;
+  --paper-light: #2c322e;
+  --paper-deep: #363b35;
+  --ink: #f0ece2;
+  --muted: #b1ad9f;
+  --line: #454b43;
+  --rust: #cc8066;
+  --sage: #92a699;
+  --blue: #9aafbd;
+  --lilac: #b8a1b8;
+  --marigold: #d5b574;
+}
+
+html, body { background: #202523; color: var(--ink); }
+body { background: radial-gradient(ellipse at 12% 10%, #46554d 0, transparent 28%), linear-gradient(180deg, #202725, #242725 48%, #292724); }
+body:before { background-image: radial-gradient(#e7dfca14 .65px, transparent .65px); opacity: .45; }
+body:after { background: radial-gradient(ellipse at 83% 50%, #69545e25, transparent 31%), radial-gradient(ellipse at 8% 83%, #536c6224, transparent 34%); }
+
+/* Navigation */
+.nav-inner { border-color: #eee6d91f; background: #242a27db; }
+.site-nav.scrolled .nav-inner { border-color: #eee6d92a; background: #242a27f5; box-shadow: 0 7px 22px #0003; }
+.nav-links a { color: #c0baad; }
+.nav-links a:hover, .nav-links a.active { color: #f0ece2; }
+.nav-cta { color: #ede6d7; border-color: #c5b29a70; }
+.nav-cta:hover { color: #242a27; border-color: var(--marigold); background: var(--marigold); }
+.brand { color: #e0aa8f; border-color: #cc80669c; }
+.brand i { color: #f0ece2; }
+.mobile-nav { border-color: #eee6d92b; background: #262c29f7; box-shadow: 0 12px 30px #0005; }
+.mobile-nav a { color: #f0ece2; border-color: #eee6d91c; }
+
+/* Keep the colorful opening scene; deepen its type and note surfaces. */
+.hero:before { background: radial-gradient(ellipse at 82% 19%, #877181 0%, transparent 31%), radial-gradient(ellipse at 15% 85%, #607e79 0%, transparent 32%), linear-gradient(116deg, #263c45 0%, #34424a 54%, #51464d 100%); }
+.art-paper { background: #f5eedf; border-color: #efe3cf; }
+.sticky-note { background: #dfbf82; }
+
+/* Dark, tinted section bands give the page a softer rhythm. */
+#skills:before { background: #292f2c; }
+#projects:before { background: #302e31; }
+#notes:before { background: #302d2b; }
+.section-heading h2, .contact-copy h2 { color: #f0ece2; }
+.section-heading>p, .about-copy p:last-child { color: #b8b3a6; }
+.eyebrow { color: #c0baad; }
+.about-copy .lead { color: #f0ece2; }
+.about-aside { background: #35443d; border-color: #53665b; }
+.about-aside p { color: #f0ece2; }
+.about-aside p em { color: #d7b27c; }
+.aside-number { color: #c7c2b6; }
+.aside-sign { color: #dc977e; }
+
+/* Skills and career */
+.skill-card { background: #303632; border-color: #4a5049; }
+.skill-card:hover { background: #38403a; border-color: #7e8975; }
+.skill-card h3 { color: #eee9de; }
+.skill-head { color: #bcb7aa; }
+.pills span, .tags span { color: #d3cdbf; border-color: #565c53; background: #393e38; }
+.timeline { border-color: #454b43; }
+.timeline-item { border-color: #454b43; }
+.timeline-period { color: #c0baad; }
+.timeline-content { border-color: #454b43; }
+.timeline-org { color: #c5bfb1; }
+.timeline-content p { color: #b7b2a6; }
+.timeline-meta b { color: #9f9b8e; }
+
+/* Project cards keep individual color fields against the darker page. */
+.project-card { background: #2a302d; border-color: #474d46; }
+.project-card:hover { border-color: #9e8e78; box-shadow: 0 15px 32px #0003; }
+.project-card:nth-child(1) .project-art { background-color: #506677; }
+.venture-art { background: radial-gradient(circle at 79% 25%, #c99b5f 0 8%, transparent 8.5%), linear-gradient(135deg, #526c7c, #657077); }
+.venture-letters { color: #f3eddf; }
+.venture-letters em { color: #e39a7c; }
+.venture-scribble, .venture-scribble:before, .venture-scribble:after { border-color: #b2c0c2; }
+.venture-scribble b { color: #f0e5ce; }
+.project-card:nth-child(2) .project-art { background-color: #644d56; }
+.closet-art { background: radial-gradient(circle at 78% 29%, #a17e9b 0 9%, transparent 9.5%), linear-gradient(135deg, #604d56, #766052); }
+.closet-title { color: #f2e8dc; }
+.closet-title em { color: #e6a083; }
+.swatches i:nth-child(1) { background: #c47c61; }
+.swatches i:nth-child(2) { background: #cfb27d; }
+.swatches i:nth-child(3) { background: #70877b; }
+.swatches i:nth-child(4) { background: #a48eaa; }
+.hanger { color: #e3c1a9; }
+.project-card:nth-child(3) .project-art { background-color: #4d6259; }
+.tasks-art { background: radial-gradient(circle at 76% 28%, #d0aa68 0 8%, transparent 8.5%), linear-gradient(135deg, #4e675e, #626c5e); }
+.tasks-title { color: #f1ecdf; }
+.tasks-title em { color: #e2b47c; }
+.paper-stack span { color: #38403a; border-color: #d3ccbd; }
+.paper-stack span:nth-child(1) { background: #e7e0d2; }
+.paper-stack span:nth-child(2) { background: #dfcda9; }
+.paper-stack span:nth-child(3) { background: #d8cbd8; }
+.project-info h3 { color: #f0ece2; }
+.project-info p { color: #bcb7ab; }
+.project-meta { color: #e0a082; }
+.project-card:nth-child(2) .project-meta { color: #c5a9c4; }
+.project-card:nth-child(3) .project-meta { color: #a8c0ae; }
+.project-meta i { color: #e6dfd1; border-color: #697066; }
+.project-card:hover .project-meta i { color: var(--marigold); border-color: var(--marigold); }
+.project-info .tags span { color: #d5cdbd; border-color: #4c534b; background: #343a35; }
+.repo-link { color: #e0dbcf; }
+.repo-link:hover { color: #e0b977; }
+
+/* Quietly colorful note cards; dark contact panel gets warm text and gold. */
+.note-card { border-color: #4a4d45; }
+.note-card:nth-child(1) { background: #35423c; }
+.note-card:nth-child(2) { background: #43363e; }
+.note-card:nth-child(3) { background: #454035; }
+.note-meta { color: #c8c1b2; }
+.note-card h3 { color: #f1ece1; }
+.note-card p { color: #c3bdaf; }
+.note-card:nth-child(1) .note-mark { color: #8ba495; }
+.note-card:nth-child(2) .note-mark { color: #b698b0; }
+.note-card:nth-child(3) .note-mark { color: #d0ae72; }
+.note-foot { color: #c5bcad; }
+.contact-card { border-color: #465b5a; background: linear-gradient(118deg, #2e444b 0%, #3e4c53 54%, #55464e 100%); }
+.contact-copy h2 { color: #f5f0e6; }
+.contact-copy h2 em { color: #e4be83; }
+.contact-copy p { color: #d3cfc4; }
+.contact-copy .eyebrow { color: #d5cfc2; }
+.social-list>small { color: #d5cfc2; }
+.social-list>a { color: #f2ede3; border-color: #ffffff26; }
+.social-list>a span, .social-list>a em { color: #d0c7ba; }
+.footer { color: #b5b0a3; border-color: #454b43; }
+.footer .brand { color: #e1a084; border-color: #cc80669c; }
+
+/* Keep the animated name on its intended single line across desktop sizes. */
+.hero h1.animated-title { font-size: clamp(4.8rem, 6.4vw, 6rem); }
+@media(max-width:1000px) {
+  .hero h1.animated-title { font-size: clamp(4.3rem, 8.7vw, 5.8rem); }
+}
+@media(max-width:680px) {
+  .hero h1.animated-title { font-size: clamp(3.3rem, 14.5vw, 5rem); }
+}
+
+@media(max-width:680px) {
+  .mobile-nav { background: #262c29f7; }
+}
